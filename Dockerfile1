@@ -4,17 +4,7 @@ pipeline {
 
     agent any
 
-tools {
-
-
-
-            maven 'maven'
-
-
-
-     }    
-
-    
+ 
 
 
 
@@ -22,26 +12,7 @@ tools {
 
 
 
-        stage ('Running Build Automation Maven'){
-
-            steps {
-
-                rtMavenRun(
-
-                    tool: 'maven',
-
-                    pom: 'pom.xml',
-
-                    goals: 'clean install'                    
-
-                    )
-
-            }
-
-        }
-
-
-       
+         
 
 
 
