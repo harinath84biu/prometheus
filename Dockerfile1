@@ -4,7 +4,15 @@ pipeline {
 
     agent any
 
+tools {
 
+
+
+            maven 'maven'
+
+
+
+     }    
 
     
 
@@ -14,31 +22,26 @@ pipeline {
 
 
 
-        stage('Build') {
+        stage ('Running Build Automation Maven'){
 
+            steps {
 
+                rtMavenRun(
 
-              steps {
+                    tool: 'maven',
 
+                    pom: 'pom.xml',
 
+                    goals: 'clean install'                    
 
-                echo 'Running build automation'
-
-
-
-                archiveArtifacts artifacts: 'dist/trainSchedule.zip'
-
-
+                    )
 
             }
-
-
 
         }
 
 
-
-        
+       
 
 
 
