@@ -1,5 +1,5 @@
 sudo yum remove docker \
-> docker-client\
+> docker-client \
 > docker-latest \
 > docker-latest-logrotate \
 > docker-client-latest \
